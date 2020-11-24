@@ -1,0 +1,26 @@
+
+sudo vi /etc/hostname
+sudo vi /etc/hosts
+
+
+sudo dnf install fedora-upgrade
+sudo dnf upgrade --refresh
+sudo dnf system-upgrade download --refresh --releasever=32
+
+sudo dnf system-upgrade reboot
+sudo dnf system-upgrade clean
+sudo dnf clean packages
+
+ssh-keygen
+
+cat .ssh/id_rsa.pub
+vi .ssh/authorized_keys
+vi .ssh/config
+sudo chmod 400 ~/.ssh/config
+
+
+10.1.1.4  jumphost
+10.1.1.5  okd-master
+10.1.1.6  okd-node1
+10.1.1.7  okd-node2
+10.1.1.8  okd-node3
